@@ -1,11 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Misión, Visión y Desarrollo Personal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4e54c8;
+            --secondary-color: #8f94fb;
+            --accent-color: #ff6b6b;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .custom-slider {
+            padding: 60px 0;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .slider-content {
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+        }
+        
+        .text-content {
+            padding: 30px;
+        }
+        
+        .img-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .img-content img {
+            max-width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .img-content img:hover {
+            transform: scale(1.03);
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-container {
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .content-text {
+            padding: 40px;
+        }
+        
+        .content-image {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .content-image img {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li i {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .slider-content, .content-container {
+                flex-direction: column;
+            }
+            
+            .text-content, .content-text {
+                padding: 20px;
+            }
+            
+            .img-content, .content-image {
+                padding: 15px;
+            }
+            
+            .content-image img {
+                height: 300px;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+
+<!-- Slider Section -->
+<section class="custom-slider">
+    <div class="container">
+        <div id="textImageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#textImageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#textImageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#textImageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="slider-content">
+                        <div class="col-md-6 text-content">
+                            <h2>Misión Personal</h2>
+                            <p>La brújula interna que guía nuestras decisiones y acciones hacia un propósito significativo. Define quiénes somos y qué contribución única podemos hacer al mundo.</p>
+                            <a href="#" class="btn btn-light">Descubrir más</a>
+                        </div>
+                        <div class="col-md-6 img-content">
+                            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=600&q=80" alt="Misión personal" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="slider-content">
+                        <div class="col-md-6 text-content">
+                            <h2>Visión de Futuro</h2>
+                            <p>La imagen clara de hacia dónde nos dirigimos y qué queremos lograr. Una visión poderosa inspira acción constante y resiliencia frente a los desafíos.</p>
+                            <a href="#" class="btn btn-light">Ver ejemplos</a>
+                        </div>
+                        <div class="col-md-6 img-content">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Visión de futuro" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="slider-content">
+                        <div class="col-md-6 text-content">
+                            <h2>Proyecto de Vida</h2>
+                            <p>El plan estratégico que conecta nuestra misión con nuestra visión. Un proyecto de vida bien diseñado transforma aspiraciones en realidad tangible.</p>
+                            <a href="#" class="btn btn-light">Conocer más</a>
+                        </div>
+                        <div class="col-md-6 img-content">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Proyecto de vida" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#textImageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#textImageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Content Section -->
+<!-- Pregunta 01-->
+<section class="content-section">
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">1</span> ¿Qué papel juegan la misión y la visión en el desarrollo personal y profesional?</h4>
+                <p>La misión y la visión actúan como brújulas que orientan nuestras decisiones y acciones. La misión define nuestro propósito y valores fundamentales, mientras que la visión establece una dirección clara hacia el futuro deseado. Juntas, proporcionan motivación, enfoque y un criterio para priorizar oportunidades tanto en el ámbito personal como profesional.</p>                
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Misión y visión" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 02-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=600&q=80" alt="Pirámide de Maslow" class="img-fluid">
+            </div>
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">2</span> Explica brevemente la teoría de la autorrealización de Maslow y su relación con la misión personal.</h4>
+                <p>La teoría de Maslow propone que la autorrealización es la necesidad humana más elevada, que emerge después de satisfacer las necesidades básicas. Se relaciona con la misión personal ya que esta última representa la expresión consciente de nuestro potencial único. La misión personal actúa como vehículo para alcanzar la autorrealización, alineando nuestras acciones con nuestros talentos, valores y aspiraciones más profundas.</p>
+            </div>            
+        </div>
+    </div>
+
+    <!-- Pregunta 03-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">3</span> Según Viktor Frankl, ¿cuál es la principal fuerza motivadora del ser humano?</h4>
+                <p>Viktor Frankl, fundador de la logoterapia, afirmaba que la principal fuerza motivadora del ser humano es la "voluntad de sentido" - la búsqueda de significado y propósito en la vida. Frankl sostenía que esta búsqueda de sentido es más fundamental que la búsqueda de placer o poder, y que encontrar significado incluso en las circunstancias más difíciles es esencial para la resiliencia y la salud mental.</p>                            
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=600&q=80" alt="Viktor Frankl" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 04-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1516733968668-dbdce39c4651?auto=format&fit=crop&w=600&q=80" alt="Mentalidad de crecimiento" class="img-fluid">
+            </div>
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">4</span> ¿Cómo contribuye la mentalidad de crecimiento de Carol Dweck al logro de una visión personal?</h4>
+                <p>La mentalidad de crecimiento, concepto desarrollado por Carol Dweck, sostiene que las habilidades pueden desarrollarse mediante dedicación y esfuerzo. Esta perspectiva facilita el logro de una visión personal al fomentar la resiliencia frente a obstáculos, ver los fracasos como oportunidades de aprendizaje y mantener la persistencia necesaria para alcanzar metas a largo plazo. Quienes adoptan esta mentalidad están más abiertos a feedback y más dispuestos a salir de su zona de confort para progresar hacia su visión.</p>                
+            </div>            
+        </div>
+    </div>
+
+    <!-- Pregunta 05-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">5</span> Menciona dos beneficios comprobados de tener una misión y visión claras en la vida.</h4>
+                <p>1. Mayor resiliencia y capacidad para superar adversidades: Las personas con propósito claro muestran mayor perseverancia frente a obstáculos.<br>2. Mejor salud mental y bienestar: Estudios demuestran que tener un sentido de propósito se correlaciona con menores niveles de estrés, mayor satisfacción vital y incluso mayor longevidad.</p>                
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Beneficios misión y visión" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 06-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1589656966895-2f33e7653819?auto=format&fit=crop&w=600&q=80" alt="Misión personal definición" class="img-fluid">
+            </div>
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">6</span> Define qué es una misión personal y qué función cumple.</h4>
+                <p>Una misión personal es una declaración concisa que define nuestro propósito fundamental, valores centrales y contribución única al mundo. Funciona como brújula interna que guía nuestras decisiones, establece prioridades, alinea acciones con valores, y proporciona un criterio para evaluar oportunidades. Además, sirve como fuente de motivación intrínseca durante desafíos.</p>                
+            </div>            
+        </div>
+    </div>
+
+    <!-- Pregunta 07-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">7</span> ¿Qué representa la visión personal y cómo inspira a superar obstáculos?</h4>
+                <p>La visión personal representa una imagen clara y motivadora del futuro que aspiramos crear. Inspira a superar obstáculos al: 1) Proporcionar una meta lo suficientemente atractiva como para valer la pena el esfuerzo; 2) Servir como recordatorio constante de "por qué" hacemos lo que hacemos; 3) Activar la resiliencia al conectar desafíos presentes con resultados futuros deseables; 4) Fomentar la creatividad en la búsqueda de soluciones alternativas.</p>                
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?auto=format&fit=crop&w=600&q=80" alt="Visión personal" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 08-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-image">
+                <img src="https://plus.unsplash.com/premium_photo-1664297860873-7049734a4573?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Proyecto de vida" class="img-fluid">
+            </div>
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">8</span> ¿Qué es un proyecto de vida y qué beneficios aporta?</h4>
+                <p>Un proyecto de vida es un plan estratégico que organiza metas, recursos y acciones para materializar nuestra misión y visión personal. Entre sus beneficios destacan: proporcionar dirección y enfoque, facilitar la toma de decisiones coherentes, optimizar el uso de tiempo y recursos, aumentar la motivación mediante hitos alcanzables, y permitir medir el progreso hacia nuestras aspiraciones más importantes.</p>                
+            </div>            
+        </div>
+    </div>
+
+    <!-- Pregunta 09-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">9</span> ¿Cuáles son los tres tipos de metas en un proyecto de vida? Da un ejemplo de cada una.</h4>
+                <p>1. Metas a corto plazo (0-1 año): Ejemplo - Completar un curso de especialización en mi área profesional.<br>2. Metas a medio plazo (1-5 años): Ejemplo - Ascender a puesto directivo en mi organización actual.<br>3. Metas a largo plazo (5+ años): Ejemplo - Crear mi propia empresa o iniciativa de impacto social.</p>                
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Tipos de metas" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 10-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=600&q=80" alt="Metas SMART" class="img-fluid">
+            </div>
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">10</span> Explica qué significa establecer metas SMART y menciona sus cinco características.</h4>
+                <p>Establecer metas SMART significa definir objetivos utilizando cinco criterios específicos: 1) Específicas (claramente definidas), 2) Medibles (cuantificables o verificables), 3) Alcanzables (realistas pero desafiantes), 4) Relevantes (alineadas con misión y valores), y 5) Temporales (con plazo definido). Este enfoque aumenta significativamente las probabilidades de éxito al convertir aspiraciones vagas en objetivos concretos y accionables.</p>                
+            </div>            
+        </div>
+    </div>
+
+    <!-- Pregunta 11-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">11</span> ¿Qué es el liderazgo coach y cómo acompaña el desarrollo personal?</h4>
+                <p>El liderazgo coach es un estilo de liderazgo que se enfoca en desarrollar el potencial de las personas mediante preguntas poderosas, escucha activa y feedback constructivo. Acompaña el desarrollo personal al: 1) Facilitar la autoreflexión y el autoconocimiento; 2) Ayudar a identificar y superar limitaciones autoimpuestas; 3) Fomentar la autonomía y la responsabilidad personal; 4) Apoyar en el diseño de planes de acción efectivos; 5) Celebrar los progresos y aprendizajes.</p>                
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=600&q=80" alt="Liderazgo coach" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pregunta 12-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Plan de acción" class="img-fluid">
+            </div>
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">12</span> ¿Qué etapas incluye un plan de acción personal para un proyecto de vida?</h4>
+                <p>Un plan de acción personal efectivo incluye: 1) Definición clara de objetivos SMART; 2) Identificación de recursos necesarios (conocimientos, habilidades, apoyo); 3) Establecimiento de hitos intermedios y fechas límite; 4) Designación de acciones específicas y responsables; 5) Sistema de monitoreo y evaluación del progreso; 6) Mecanismos de ajuste frente a imprevistos; 7) Estrategias de celebración y reconocimiento de avances.</p>                
+            </div>            
+        </div>
+    </div>
+
+    <!-- Pregunta 13-->
+    <div class="container">
+        <div class="content-container">
+            <div class="col-md-6 content-text">
+                <h4><span class="badge rounded-circle bg-primary fs-6">13</span> ¿Por qué se afirma que la misión y la visión son el motor de la vida?</h4>
+                <p>Se afirma que la misión y la visión son el motor de la vida porque proporcionan la energía, dirección y propósito que impulsan nuestras acciones. La misión actúa como el "por qué" que da significado a nuestros esfuerzos, mientras que la visión representa el "qué" y "hacia dónde" que nos mantiene en movimiento. Juntas, transforman la existencia de una serie de eventos reactivos en un viaje proactivo hacia la realización personal, superando la mera supervivencia para alcanzar una vida plena y con propósito.</p>                
+            </div>
+            <div class="col-md-6 content-image">
+                <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=600&q=80" alt="Motor de vida" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
